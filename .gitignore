@@ -9,5 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
+# Secrets
+.env
+
 # Generated vector index
 data/faiss_index/
