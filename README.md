@@ -14,8 +14,8 @@
 
 | 버전 | 핵심 변경 | 결과 | 날짜 |
 |------|-----------|------|------|
-| v0 | `plain_rag.py` — LangChain 없이 Google SDK로 RAG 직접 구현 (로딩 → 청킹 → 임베딩 → 코사인 유사도 검색 → 생성) | RAG 원리 이해, 단일 파일 프로토타입 | 7/7 |
-| v1 | alex-rag 데모 참고, LangChain 스택 도입 (`ingestion` → `vectorstore` → `chain` / `graph` 분리), `data/alex-notes` 코퍼스 연결 | 기반 구조 완성, but CLI(graph)와 API(chain) 이원화 | 7/8 |
+| v0 | `plain_rag.py` — LangChain 없이 Google SDK로 RAG 직접 구현 (로딩 → 청킹 → 임베딩 → 코사인 유사도 검색 → 생성) | RAG 원리 이해, 단일 파일 프로토타입 | 6/30 |
+| v1 | alex-rag 데모 참고, LangChain 스택 도입 (`ingestion` → `vectorstore` → `chain` / `graph` 분리), `data/alex-notes` 코퍼스 연결 | 기반 구조 완성, but CLI(graph)와 API(chain) 이원화 | 7/6 |
 | v2 | **Phase 1 리팩터링** — `prompts.py` 프롬프트 분리, `rag.py` + `ask()` 단일 진입점, LangGraph를 RAG 코어로 통일, `chain.py` 제거 | CLI·API가 동일한 LangGraph 파이프라인 공유 | 7/9 |
 | v3 | **Phase 2 부분 완료** — `config.py` API 키 검증, `VECTORSTORE_PATH` 일원화, `CHUNK_SIZE`/`CHUNK_OVERLAP` config 이동 | 설정 중복 제거, 시작 시 에러 명확화 | 7/9 |
 
