@@ -1,4 +1,4 @@
-# LENA-PJ — Week 7 과제 총정리
+# LENA-PJ — 과제 회고
 
 개인 학습 노트(`alex-notes`)를 지식 베이스로 활용하는 **LangGraph 기반 RAG 파이프라인** 프로젝트입니다.
 
