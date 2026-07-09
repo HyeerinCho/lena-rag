@@ -121,13 +121,6 @@ QueryResponse(question, answer) JSON 응답
 
 ## 5. 실행 방법
 
-### 환경 설정
-
-```bash
-cp .env.example .env
-# .env에 GOOGLE_API_KEY 입력 (필수)
-```
-
 ### 가상환경 실행
 
 ```bash
@@ -150,13 +143,6 @@ lena-api
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
   -d '{"question": "RAG가 뭐야?"}'
-```
-
-### 벡터 인덱스 재생성 (노트 수정 후)
-
-```bash
-rm -rf data/faiss_index/
-lena "테스트 질문"
 ```
 
 ### LangSmith Dataset 시드
