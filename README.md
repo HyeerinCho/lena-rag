@@ -128,7 +128,7 @@ cp .env.example .env
 # .env에 GOOGLE_API_KEY 입력 (필수)
 ```
 
-### 의존성 설치
+### 가상환경 실행
 
 ```bash
 uv sync
