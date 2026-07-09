@@ -174,13 +174,11 @@ uv run python eval/dataset.py
 ### 6-1. 과정 서술
 
 
-### 6-3. 앞으로 할 일
+### 6-2. 앞으로 할 일
 
 - [ ] `pyproject.toml` 미사용 의존성 정리 (`google-generativeai`, `numpy`, `pypdf`, `ragas`)
-- [ ] `eval/dataset.py` — `if __name__ == "__main__"` 가드, 중복 예제 방지
 - [ ] LangSmith Dataset 기반 자동 평가 파이프라인
 - [ ] retriever `top_k` 튜닝, 빈 검색 fallback
-- [ ] FAISS 인덱스 무효화 전략 (`--reindex` 옵션 등)
 - [ ] LangGraph 확장 — 출처 표시, relevance grading 노드
 
 ---
