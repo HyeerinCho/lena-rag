@@ -117,7 +117,7 @@ QueryResponse(question, answer) JSON 응답
 | import 시마다 문서 로딩·인덱싱 | `graph.py` 모듈 레벨에서 `load_and_split` 실행 | `@lru_cache` + `get_rag_graph()`로 lazy init | `src/rag.py` |
 | 매번 인덱싱 (초기) | 벡터를 RAM에만 저장 | FAISS `save_local` / `load_local`로 디스크 캐싱 | `src/vectorstore.py` |
 | API 키 없을 때 불명확한 에러 | `GOOGLE_API_KEY` None 검증 없음 | 시작 시 `ValueError` 발생 | `src/config.py` |
-| Gemini API 토큰 부족| free tier embed 100 req/min - 1분당이기 때문에 토큰 초기화까지 대기 걸어둠 |  | `src/config.py` |
+| Gemini API 토큰 부족| free tier embed 100 req/min | 1분당 할당되기 때문에 토큰 초기화까지 대기 걸어둠 | `src/config.py` |
 
 ---
 
