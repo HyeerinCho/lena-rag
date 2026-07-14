@@ -1,10 +1,12 @@
 # LENA-PJ — 과제 회고
 
+
 ## 1. 과제 목표
 
 - LangChain + **LangGraph** 기반 RAG 파이프라인 구축
 - FastAPI로 REST API 래핑
 - LangSmith로 체인 실행 Tracing 및 Dataset 기반 평가 (진행 중)
+
 
 ## 2. 버전별 변경 사항 요약
 
@@ -15,7 +17,7 @@
 | v2 | **Phase 1 리팩터링** — `prompts.py` 프롬프트 분리, `rag.py` + `ask()` 단일 진입점, LangGraph를 RAG 코어로 통일, `chain.py` 제거 - 그래프 마이그레이션 | CLI·API가 동일한 LangGraph 파이프라인 공유 | 7/9 |
 | v3 | **Phase 2 부분 완료** — `config.py` API 키 검증, `VECTORSTORE_PATH` 일원화, `CHUNK_SIZE`/`CHUNK_OVERLAP` config 이동 | 설정 중복 제거, 시작 시 에러 명확화 | 7/9 |
 
----
+
 
 ## 3. 핵심 개념 정리
 
@@ -113,7 +115,7 @@ QueryResponse(question, answer) JSON 응답
 | API 키 없을 때 불명확한 에러 | `GOOGLE_API_KEY` None 검증 없음 | 시작 시 `ValueError` 발생 | `src/config.py` |
 | Gemini API 토큰 부족| free tier embed 100 req/min | 1분당 할당되기 때문에 토큰 초기화까지 대기 걸어둠 | `src/config.py` |
 
----
+
 
 ## 5. 실행 방법
 
@@ -147,7 +149,7 @@ curl -X POST http://localhost:8000/query \
 uv run python eval/dataset.py
 ```
 
----
+
 
 ## 6. 회고
 
@@ -169,7 +171,7 @@ uv run python eval/dataset.py
 - [ ] LangSmith Dataset 기반 평가 
 - [ ] retriever `top_k` 튜닝, 빈 검색 fallback
 
----
+
 
 ## 7. 참고 링크
 
