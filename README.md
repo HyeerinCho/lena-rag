@@ -1,14 +1,10 @@
 # LENA-PJ — 과제 회고
 
----
-
 ## 1. 과제 목표
 
 - LangChain + **LangGraph** 기반 RAG 파이프라인 구축
 - FastAPI로 REST API 래핑
 - LangSmith로 체인 실행 Tracing 및 Dataset 기반 평가 (진행 중)
-
----
 
 ## 2. 버전별 변경 사항 요약
 
